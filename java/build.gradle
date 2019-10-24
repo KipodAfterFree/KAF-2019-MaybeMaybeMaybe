@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+version ''
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes("Main-Class": "Main" )
+    }
+}
+
+dependencies {
+    compile 'org.quteshell:quteshell:1.1.0'
+}

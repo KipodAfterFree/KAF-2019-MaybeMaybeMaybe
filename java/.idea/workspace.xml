@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab8179f9-12b8-4118-84d6-a5b987902ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/Welcome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/credentials.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/authenticate/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/authenticate/configuration.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/authenticate/ids/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/authenticate/sessions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/authenticate/users/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/authenticate/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/authenticate/authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/scripts/frontend/authenticate/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/files/mmm/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/files/mmm/keys/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/mmm/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/mmm/mmm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../web/upload/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/WebAppBase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../web/AuthenticationTemplate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/credentials.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/layouts/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/layouts/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/layouts/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/layouts/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/resources/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../web/resources/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/resources/offline.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/resources/offline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/scripts/frontend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/scripts/frontend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/stylesheets/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/stylesheets/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/stylesheets/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/stylesheets/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/template.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -560,7 +546,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="683" />
     <option name="width" value="653" />
     <option name="height" value="768" />
@@ -688,7 +674,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571905562956</updated>
-      <workItem from="1571905567752" duration="3050000" />
+      <workItem from="1571905567752" duration="3133000" />
     </task>
     <task id="LOCAL-00001" summary="Things">
       <created>1571910614596</created>
@@ -701,10 +687,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3050000" />
+    <option name="totallyTimeSpent" value="3133000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />

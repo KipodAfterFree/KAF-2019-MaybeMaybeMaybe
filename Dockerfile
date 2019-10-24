@@ -5,6 +5,8 @@ RUN mkdir -p /usr/share/man/man1
 # Install java
 RUN apt-get -y install openjdk-8-jre-headless ca-certificates-java --no-install-recommends --no-install-suggests
 ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+# Install gnupg & php-gnupg
+RUN apt-get -y install gnupg php-gnupg
 # Copy WebApp to /var/www/html
 COPY web /var/www/html
 # Change ownership of /var/www

@@ -2,4 +2,8 @@ function load() {
     page("home");
 }
 
-// App Code
+function sign() {
+    api("scripts/backend/mmm/mmm.php", "mmm", "sign", {data: get("document").value},()=>{
+
+    }, authenticate());
+}

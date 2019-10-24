@@ -3,7 +3,8 @@ function load() {
 }
 
 function sign() {
-    api("scripts/backend/mmm/mmm.php", "mmm", "sign", {data: get("document").value},()=>{
-
+    api("scripts/backend/mmm/mmm.php", "mmm", "sign", {data: get("document").value},(success, result, error)=>{
+        if (success)
+            download("paper.sodium-signed", result);
     }, authenticate());
 }

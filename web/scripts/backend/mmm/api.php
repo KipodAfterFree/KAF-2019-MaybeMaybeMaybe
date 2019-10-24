@@ -24,13 +24,13 @@ function mmm()
 function mmm_prepare($id)
 {
     if (!file_exists(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key")) {
-        $keypair = sodium_crypto_kx_keypair();
-        $secretkey = sodium_crypto_kx_secretkey($keypair);
-        file_put_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", $secretkey);
+        $keypair = sodium_crypto_sign_keypair();
+        $secretkey = sodium_crypto_sign_secretkey($keypair);
+        file_put_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", base64_encode($secretkey));
     }
 }
 
 function mmm_key($id)
 {
-    return file_get_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key");
+    return base64_decode(file_get_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key"));
 }

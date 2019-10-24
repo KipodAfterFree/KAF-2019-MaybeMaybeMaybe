@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab8179f9-12b8-4118-84d6-a5b987902ebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../web/files/mmm/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/files/mmm/keys/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/mmm/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/scripts/backend/mmm/mmm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../web/upload/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/credentials.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/scripts/backend/mmm/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web/scripts/backend/mmm/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../web/scripts/frontend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/scripts/frontend/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -69,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/commands/Welcome.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -691,7 +684,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
@@ -771,7 +763,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/commands/Welcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -781,7 +773,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

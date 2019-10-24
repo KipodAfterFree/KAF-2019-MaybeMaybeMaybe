@@ -1,10 +1,10 @@
 {
   "name": "MMM",
   "short_name": "MMM",
-  "description": "MaybeMaybeMaybe",
+  "description": "Maybe Maybe Maybe",
   "start_url": "../index.html",
-  "background_color": "#a8c4ff",
-  "theme_color": "#a8c4ff",
+  "background_color": "#4696b2",
+  "theme_color": "#4696b2",
   "display": "standalone",
   "orientation": "natural",
   "icons": [

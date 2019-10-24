@@ -1,5 +1,5 @@
 function load() {
-    // App Load Code
+    page("home");
 }
 
 // App Code

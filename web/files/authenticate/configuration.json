@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "authenticate": true,
+    "signin": true,
+    "signup": true
+  },
+  "security": {
+    "hash": {
+      "algorithm": "sha256",
+      "onionLayers": 1024,
+      "saltLength": 512
+    },
+    "passwordLength": 8,
+    "sessionLength": 512,
+    "lockTimeout": 10,
+    "userIDLength": 20
+  }
+}

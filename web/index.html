@@ -6,10 +6,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="description" content="MaybeMaybeMaybe">
+    <meta name="description" content="Maybe Maybe Maybe">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, minimal-ui"/>
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#a8c4ff"/>
+    <meta name="theme-color" content="#4696b2"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <meta name="apple-mobile-web-app-title" content="MMM"/>
@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="stylesheets/template.css"/>
     <script type="text/javascript" src="scripts/frontend/app.js"></script>
     <script type="text/javascript" src="scripts/frontend/base/api.js"></script>
+    <script type="text/javascript" src="scripts/frontend/authenticate/api.js"></script>
+    <link rel="user-agent" href="credentials.json"/>
     <title>MMM</title>
     <noscript></noscript>
 </head>
-<body onload="prepare(load)" column>
+<body onload="prepare(()=>authentication(load))" column>
 </body>
 </html>

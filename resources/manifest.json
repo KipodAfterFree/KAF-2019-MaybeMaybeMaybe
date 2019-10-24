@@ -1,0 +1,22 @@
+{
+  "name": "MMM",
+  "short_name": "MMM",
+  "description": "MaybeMaybeMaybe",
+  "start_url": "../index.html",
+  "background_color": "#a8c4ff",
+  "theme_color": "#a8c4ff",
+  "display": "standalone",
+  "orientation": "natural",
+  "icons": [
+    {
+      "src": "../images/icons/app/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "../images/icons/app/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,8 +1,12 @@
 <div id="home" column>
-    <p>MoMMy, sign my paper!</p>
-    <textarea id="document">
-        Chapter 1:
-        Blah Blah Blah
-    </textarea>
+    <p style="font-size: 6vh">Mommy, sign my paper!</p>
+    <textarea id="document" placeholder="Plaintext">Thing to be signed.</textarea>
     <button onclick="sign()">Sign my paper</button>
+    <button onclick="page('verify');">Verify paper</button>
+</div>
+<div id="verify" column>
+    <p style="font-size: 6vh">Verify a paper's signature</p>
+    <p>Copy an MMM content or load a file.</p>
+    <textarea id="data" placeholder="MMM File"></textarea>
+    <button onclick="verify()">Verify</button>
 </div>

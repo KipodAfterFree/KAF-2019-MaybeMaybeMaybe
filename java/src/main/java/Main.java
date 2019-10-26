@@ -6,7 +6,7 @@ import java.net.ServerSocket;
 import java.util.ArrayList;
 
 public class Main {
-    private static final int PORT = 35850;
+    private static final int PORT = 9837;
     private static final ArrayList<Quteshell> quteshells = new ArrayList<>();
 
     private static boolean listening = true;
@@ -16,6 +16,7 @@ public class Main {
         Quteshell.Configuration.Commands.remove(Echo.class);
         Quteshell.Configuration.Commands.remove(Clear.class);
         Quteshell.Configuration.Commands.add(commands.Login.class);
+        Quteshell.Configuration.Commands.add(commands.Upload.class);
         Quteshell.Configuration.Commands.add(commands.Welcome.class);
         try {
             ServerSocket serverSocket = new ServerSocket(PORT);

@@ -33,16 +33,16 @@ public class Upload implements Command {
                     if (mmm_verify(priDigest, pubDigest, message, key)) {
                         shell.writeln("Message signature verification passed", Quteshell.Color.LightGreen);
                         // TODO write some function that filters some of the fileName
-                        File toWrite = new File("/var/www/html/upload/" + id + "/" + fileName);
+                        File dir = new File("/var/www/html/upload/" + id + "/");
+                        File toWrite = new File(dir, fileName);
                         shell.writeln("Writing file to '" + toWrite.getPath() + "'");
-                        toWrite.mkdirs();
+                        dir.mkdirs();
                         try {
                             Files.write(toWrite.toPath(), message.getBytes());
-                        } catch (IOException e) {
-                            shell.writeln("Error - " + e.getMessage(), Quteshell.Color.LightRed);
-                        } finally {
                             shell.writeln("File written successfully.", Quteshell.Color.LightGreen);
                             shell.finish();
+                        } catch (IOException e) {
+                            shell.writeln("Error - " + e.getMessage(), Quteshell.Color.LightRed);
                         }
                     } else {
                         shell.writeln("Message signature verification failed", Quteshell.Color.LightRed);

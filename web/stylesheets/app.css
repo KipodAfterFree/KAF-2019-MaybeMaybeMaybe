@@ -3,4 +3,20 @@ body {
     max-width: 460px;
 }
 
-/* App Style */
+textarea{
+    height: 40vh;
+}
+
+#results>p{
+    height: 30vh;
+    background-color: #404040;
+    border-radius: 5vh;
+}
+
+.auth-true{
+    background-color: #00AA00 !important;
+}
+
+.auth-false{
+    background-color: #AA0000 !important;
+}

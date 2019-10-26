@@ -20,10 +20,13 @@ function mmm()
     api("mmm", function ($action, $parameters) {
         $userID = authenticate();
         if ($userID !== null) {
-            mmm_prepare($userID);
             if ($action === "sign") {
                 if (isset($parameters->data)) {
-                    return [true, mmm_hmac_sign($parameters->data, mmm_pkey($userID))];
+                    return [true, mmm_hmac_sign($parameters->data, mmm_load_key($userID))];
+                }
+            } else if ($action === "verify") {
+                if (isset($parameters->data)) {
+                    return [true, mmm_hmac_verify($parameters->data, mmm_load_key($userID))];
                 }
             }
             return [false, "Unknown action"];
@@ -32,15 +35,13 @@ function mmm()
     }, true);
 }
 
-function mmm_prepare($id)
+function mmm_load_key($id)
 {
     if (!file_exists(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key")) {
-        file_put_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", random(128));
+        $key = random(128);
+        file_put_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", $key);
+        return $key;
     }
-}
-
-function mmm_pkey($id)
-{
     return file_get_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key");
 }
 
@@ -55,9 +56,18 @@ function mmm_derive_key($key)
 
 function mmm_hmac_verify($mmm, $key)
 {
+    $parsed = mmm_parse($mmm);
+    if (count($parsed) > 0) {
+        return mmm_hmac_calculate($parsed[2], $key) === $parsed[0] && mmm_hmac_calculate($parsed[2], mmm_derive_key($key)) === $parsed[1];
+    }
+    return false;
+}
+
+function mmm_parse($mmm)
+{
     $lines = explode("\n", $mmm);
     if (count($lines) >= 7) {
-        if ($lines[0] === "---START MMM---" &&
+        if ($lines[0] === "---BEGIN MMM---" &&
             $lines[1] === "---PRIVATE DIGEST---" &&
             $lines[3] === "---PUBLIC DIGEST---" &&
             $lines[5] === "---MESSAGE---" &&
@@ -71,10 +81,10 @@ function mmm_hmac_verify($mmm, $key)
                 }
                 $data .= $lines[$l];
             }
-            return mmm_hmac_calculate($data, $key) === $private_hmac && mmm_hmac_calculate($data, mmm_derive_key($key)) === $public_hmac;
+            return [$private_hmac, $public_hmac, $data];
         }
     }
-    return false;
+    return [];
 }
 
 function mmm_hmac_sign($plaintext, $key)
@@ -91,8 +101,10 @@ function mmm_hmac_sign($plaintext, $key)
     $string .= "\n";
     $string .= "---MESSAGE---";
     $string .= "\n";
-    $string .= $plaintext;
-    $string .= "\n";
+    if (strlen($plaintext) > 0) {
+        $string .= $plaintext;
+        $string .= "\n";
+    }
     $string .= "---END MMM---";
     return $string;
 }

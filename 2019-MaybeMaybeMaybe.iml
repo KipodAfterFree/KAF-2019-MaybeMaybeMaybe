@@ -4,5 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="aes" level="application" />
+    <orderEntry type="library" name="hmac-sha256" level="application" />
+    <orderEntry type="library" name="crypto-js" level="application" />
   </component>
 </module>

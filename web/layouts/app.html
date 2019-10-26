@@ -8,5 +8,14 @@
     <p style="font-size: 6vh">Verify a paper's signature</p>
     <p>Copy an MMM content or load a file.</p>
     <textarea id="data" placeholder="MMM File"></textarea>
+    <button onclick="upload((file,content)=>get('data').value=content, true)">Pick a file</button>
     <button onclick="verify()">Verify</button>
+</div>
+<div id="results" column>
+    <p id="pubkey">
+        Wait, verifying PubDigest...
+    </p>
+    <p id="prikey">
+        Wait, verifying PriDigest...
+    </p>
 </div>

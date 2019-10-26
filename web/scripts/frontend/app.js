@@ -1,7 +1,7 @@
 function load() {
     page("home");
     console.log("------------------------------------USER INFO------------------------------------");
-    console.log("     Mommy signs using the hmac functions ontop of the sha256 hash function.     ");
+    console.log("     Mommy signs using the hmac function ontop of the sha256 hash function.     ");
     console.log("              Use 'nc ctf.kipodafterfree.com 9837' to upload files.              ");
 }
 

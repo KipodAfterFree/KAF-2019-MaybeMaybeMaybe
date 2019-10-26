@@ -22,5 +22,7 @@ jar {
 }
 
 dependencies {
-    compile 'org.quteshell:quteshell:1.1.0'
+    compile 'org.quteshell:quteshell:1.2.0'
+    compile 'org.json:json:20190722'
+    compile 'com.google.guava:guava:20.0'
 }

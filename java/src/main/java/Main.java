@@ -12,9 +12,7 @@ public class Main {
     private static boolean listening = true;
 
     public static void main(String[] args) {
-        Quteshell.Configuration.Commands.remove(ID.class);
         Quteshell.Configuration.Commands.remove(Welcome.class);
-        Quteshell.Configuration.Commands.remove(Rerun.class);
         Quteshell.Configuration.Commands.remove(Echo.class);
         Quteshell.Configuration.Commands.remove(Clear.class);
         Quteshell.Configuration.Commands.add(commands.Login.class);

@@ -10,5 +10,5 @@ if (isset($_GET["session"])) {
         if ($key !== null)
             echo mmm_derive_key($key);
     } else
-        echo "UID Invalid / Failed to load key from /files/mmm/keys/uid.key";
+        echo "UID Invalid / Failed to load key from /files/mmm/keys/{UID}.key";
 }

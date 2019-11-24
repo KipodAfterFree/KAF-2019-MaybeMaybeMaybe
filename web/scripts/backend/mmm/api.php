@@ -40,6 +40,7 @@ function mmm_load_key($id)
     if (!file_exists(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key")) {
         $key = random(128);
         file_put_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", $key);
+        chmod(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key", 0777);
         return $key;
     }
     return file_get_contents(KEYPAIR_DIR . DIRECTORY_SEPARATOR . $id . ".key");

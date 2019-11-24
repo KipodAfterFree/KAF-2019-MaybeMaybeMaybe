@@ -40,9 +40,8 @@ public class Upload implements Command {
                         try {
                             Files.write(toWrite.toPath(), message.getBytes());
                             shell.writeln("File written successfully.", Quteshell.Color.LightGreen);
-                            shell.finish();
                         } catch (IOException e) {
-                            shell.writeln("Error - " + e.getMessage(), Quteshell.Color.LightRed);
+                            shell.writeln("Error - " + e.toString(), Quteshell.Color.LightRed);
                         }
                     } else {
                         shell.writeln("Message signature verification failed", Quteshell.Color.LightRed);

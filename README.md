@@ -23,7 +23,7 @@ docker build . -t mmm
 
 To run the challenge, execute the following command:
 ```bash
-docker run --rm -d -p 1100:80 -p 1101:24 mmm
+docker run --rm -d -p 1100:80 -p 1101:8000 mmm
 ```
 
 ## Usage

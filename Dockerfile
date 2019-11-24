@@ -9,17 +9,23 @@ ENV JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 COPY flag.txt /flag.txt
 # Copy WebApp to /var/www/html
 COPY web /var/www/html
-# Change ownership of /var/www
-RUN chown www-data /var/www/ -R
-# Change permissions of /var/www
-RUN chmod 775 /var/www/ -R
+# Permission groups (Hardening)
+RUN useradd nopermissions
+RUN useradd -g www-data permissions
+RUN chown permissions:www-data /var/www/html -R
+RUN chmod 755 /var/www/html -R
+RUN chmod 777 /var/www/html/files/mmm/keys -R
+RUN chmod 777 /var/www/html/upload -R
+RUN chmod 777 /var/www/html/files/authenticate/ids
+RUN chmod 777 /var/www/html/files/authenticate/users
+RUN chmod 777 /var/www/html/files/authenticate/sessions.json
 # Copy server.jar to /home/
 COPY java/build/libs/MMMServer.jar /home/server.jar
 # Expose server port
-EXPOSE 9837
+EXPOSE 8000
 # Copy startup script
 COPY start.sh /start.sh
-RUN chmod 777 /start.sh
+RUN chmod 700 /start.sh
 # Enable mods
 RUN a2enmod headers
 # Restart webserver

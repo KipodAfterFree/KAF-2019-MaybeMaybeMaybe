@@ -2,7 +2,7 @@ function load() {
     page("home");
     console.log("------------------------------------USER INFO------------------------------------");
     console.log("     Mommy signs using the hmac function ontop of the sha256 hash function.     ");
-    console.log("                   Use 'nc host.kaf.sh 9837' to upload files.                   ");
+    console.log("                    Use 'nc ctf.kaf.sh 1101' to upload files.                   ");
 }
 
 function sign() {

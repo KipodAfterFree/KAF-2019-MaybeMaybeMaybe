@@ -103,6 +103,7 @@ function authenticate_sessions_unload($sessions)
  */
 function authenticate_id_load($name)
 {
+    $name = basename($name);
     if (file_exists(AUTHENTICATE_IDS_DIRECTORY . DIRECTORY_SEPARATOR . $name))
         return file_get_contents(AUTHENTICATE_IDS_DIRECTORY . DIRECTORY_SEPARATOR . $name);
     return null;
@@ -115,6 +116,7 @@ function authenticate_id_load($name)
  */
 function authenticate_id_unload($name, $id)
 {
+    $name = basename($name);
     file_put_contents(AUTHENTICATE_IDS_DIRECTORY . DIRECTORY_SEPARATOR . $name, $id);
 }
 
